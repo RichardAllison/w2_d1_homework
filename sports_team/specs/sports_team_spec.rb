@@ -15,9 +15,19 @@ class TestSportsTeam < MiniTest::Test
   # Add a points property into your class that starts at 0.
   # Create a method that takes in whether the team has won or lost and updates the points property for a win.
 
-  def test_team_name
-    team = SportsTeam.new("Avengers FC", ["Tony Stark", "Bruce Banner", "Peter Parker", "Steve Rogers"], "Nick Fury")
-    assert_equal("Avengers FC", team.team_name)
+  def setup
+    @sports_team = SportsTeam.new("Avengers FC", ["Tony Stark", "Bruce Banner", "Peter Parker", "Steve Rogers"], "Nick Fury")
   end
 
+  def test_team_name
+    assert_equal("Avengers FC", @sports_team.team_name)
+  end
+
+  def test_players
+    assert_equal(["Tony Stark", "Bruce Banner", "Peter Parker", "Steve Rogers"], @sports_team.players)
+  end
+
+  def test_coach
+    assert_equal("Nick Fury", @sports_team.coach)
+  end
 end
