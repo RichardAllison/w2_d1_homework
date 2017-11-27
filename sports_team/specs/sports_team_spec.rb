@@ -7,7 +7,7 @@ class TestSportsTeam < MiniTest::Test
   #   Now we would like you to make a class that represents a sports team.
   #
   # Make a class to represent a Team that has the properties Team name (String), Players (Array of strings) and a Coach (String).
-  # For each property in the class make a Getter method than can return them.
+  # For each property in the class make a Getter method that can return them.
   # Create a setter method to allow the coach's name to be updated.
   # Refactor the class to use attr_reader or attr_accessor instead of your own getter and setter methods.
   # Create a method that adds a new player to the player's array.
@@ -30,4 +30,10 @@ class TestSportsTeam < MiniTest::Test
   def test_coach
     assert_equal("Nick Fury", @sports_team.coach)
   end
+
+  def test_set_coach
+    @sports_team.set_coach("Phil Coulson")
+    assert_equal("Phil Coulson", @sports_team.coach)
+  end
+  
 end
