@@ -40,4 +40,13 @@ class TestSportsTeam < MiniTest::Test
     @sports_team.add_player("Thor Odinson")
     assert_equal("Thor Odinson", @sports_team.players[-1])
   end
+
+  def test_check_player__true
+    assert_equal(true, @sports_team.check_player("Bruce Banner"))
+  end
+
+  def test_check_player__false
+    assert_equal(false, @sports_team.check_player("Natasha Romanova"))
+  end
+
 end

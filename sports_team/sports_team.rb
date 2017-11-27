@@ -11,4 +11,8 @@ class SportsTeam
     @players.push(new_player)
   end
 
+  def check_player(player)
+    @players.include?(player)
+  end
+
 end
