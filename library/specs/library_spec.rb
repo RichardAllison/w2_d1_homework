@@ -43,4 +43,9 @@ def test_return_rental_details_by_title
   assert_equal({student_name: "Jeff", date: "05/12/16"}, result)
 end
 
+def test_add_new_book_by_title
+  @library.add_new_book_by_title("war_and_peace")
+  assert_equal({title: "war_and_peace", rental_details: {student_name: "", date: ""} }, @library.books[-1])
+end
+
 end
