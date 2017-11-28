@@ -2,7 +2,7 @@ class Student
 
   def initialize(student_name, cohort)
     @student_name = student_name
-    @cohort = cohort
+    @cohort = cohort.to_i() # good idea to get into the habit of doing this as the information may come from a web form or database, meaning probably a string
   end
 
   def student_name

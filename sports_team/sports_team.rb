@@ -12,12 +12,12 @@ class SportsTeam
     @players.push(new_player)
   end
 
-  def check_player(player)
+  def check_player?(player)
     @players.include?(player)
   end
 
   def game_result_points(result)
-    if result == "win"
+    if result.downcase == "win"
       @points += 1
     end
   end
